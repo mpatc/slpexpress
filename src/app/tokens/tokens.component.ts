@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Token } from '../token';
-import { TOKENS } from '../mock-tokens';
-
+import { TokenService } from '../token.service';
 @Component({
   selector: 'app-tokens',
   templateUrl: './tokens.component.html',
@@ -9,17 +8,21 @@ import { TOKENS } from '../mock-tokens';
 })
 export class TokensComponent implements OnInit {
 
-  tokens = TOKENS;
+  tokens: Token[];
   selectedToken: Token;
 
 
-  constructor() { }
+  constructor(private tokenService: TokenService) { }
 
   ngOnInit() {
+    this.getTokens();
   }
 
   onSelect(token: Token): void {
     this.selectedToken = token;
+  }
+  getTokens(): void {
+    this.tokens = this.tokenService.getTokens();
   }
 
 }
