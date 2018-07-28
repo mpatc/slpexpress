@@ -22,18 +22,7 @@ export class TokensComponent implements OnInit {
     this.selectedToken = token;
   }
   getTokens(): void {
-    this.tokens = this.tokenService.getTokens();
+    this.tokenService.getTokens().subscribe(tokens => this.tokens = tokens);
   }
 
 }
-
-// export class Token {
-  // id: number;
-  // name: string;
-  // shortname: string;
-  // age: number;
-  // totalsupply?: number;
-  // cirsupply?: number;
-  // activeusers?: number;
-  // volume?: number;
-  // price?: number;
