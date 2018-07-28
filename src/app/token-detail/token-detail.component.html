@@ -1,0 +1,29 @@
+<div *ngIf="token">
+  <h2>{{token.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{token.id}}</div>
+  <div>
+   <label>shortname:
+     <input [(ngModel)]="token.shortname" placeholder="shortname">
+   </label>
+  </div>
+  <div>
+     <label>age:
+       <input [(ngModel)]="token.age" placeholder="age">
+     </label>
+  </div>
+   <div>
+       <label>cirsupply:
+         <input [(ngModel)]="token.cirsupply" placeholder="cirsupply">
+       </label>
+     </div>
+   <div>
+         <label>totalsupply:
+           <input [(ngModel)]="token.totalsupply" placeholder="totalsupply">
+         </label>
+       </div>
+       <div>
+           <label>volume:
+             <input [(ngModel)]="token.volume" placeholder="volume">
+           </label>
+         </div>
+ </div>

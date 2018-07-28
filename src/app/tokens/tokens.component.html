@@ -1,0 +1,18 @@
+<h2 style="text-align:center">My tokens:</h2>
+
+<ul class="tokens">
+  <li *ngFor="let token of tokens"
+      [class.selected]="token === selectedToken"
+      (click)="onSelect(token)"
+>
+<span class="badge">{{token.id}} </span>{{token.name}}  ({{token.shortname}})
+
+</li>
+<!-- 
+shortname: {{token.shortname}}
+age: {{token.age}}
+Circulating Supply: {{token.cirsupply}}
+Total Supply: {{token.totalsupply}}
+Volume: {{token.volume}} -->
+</ul>
+<app-token-detail [token]="selectedToken"></app-token-detail>
