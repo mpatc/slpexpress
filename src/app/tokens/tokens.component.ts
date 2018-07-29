@@ -9,7 +9,6 @@ import { TokenService } from '../token.service';
 export class TokensComponent implements OnInit {
 
   tokens: Token[];
-  selectedToken: Token;
 
 
   constructor(private tokenService: TokenService) { }
@@ -18,9 +17,7 @@ export class TokensComponent implements OnInit {
     this.getTokens();
   }
 
-  onSelect(token: Token): void {
-    this.selectedToken = token;
-  }
+
   getTokens(): void {
     this.tokenService.getTokens().subscribe(tokens => this.tokens = tokens);
   }

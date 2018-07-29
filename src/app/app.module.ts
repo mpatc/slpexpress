@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { TokenDetailComponent } from './token-detail/token-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { AppRoutingModule } from './/app-routing.module';
     AppComponent,
     TokensComponent,
     TokenDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

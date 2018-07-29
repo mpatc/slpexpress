@@ -1,0 +1,8 @@
+<h3>Top Tokens</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let token of tokens" class="col-1-4" routerLink="/detail/{{token.shortname}}">
+    <div class="module tokens">
+      <h4>{{token.name}} ({{token.shortname}})</h4>
+    </div>
+  </a>
+</div>

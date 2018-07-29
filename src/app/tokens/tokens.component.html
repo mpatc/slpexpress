@@ -1,12 +1,10 @@
 <h2 style="text-align:center">My tokens:</h2>
 
 <ul class="tokens">
-  <li *ngFor="let token of tokens"
-      [class.selected]="token === selectedToken"
-      (click)="onSelect(token)"
->
+  <li *ngFor="let token of tokens">
+      <a routerLink="/detail/{{token.shortname}}">
 <span class="badge">{{token.id}} </span>{{token.name}}  ({{token.shortname}})
-
+</a>
 </li>
 <!-- 
 shortname: {{token.shortname}}
