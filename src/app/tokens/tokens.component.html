@@ -2,9 +2,11 @@
 
 <ul class="tokens">
   <li *ngFor="let token of tokens">
-      <a routerLink="/detail/{{token.shortname}}">
+      <a routerLink="/detail/{{token.id}}">
 <span class="badge">{{token.id}} </span>{{token.name}}  ({{token.shortname}})
 </a>
+<button style="float: right" class="btn btn-danger delete" title="delete token"
+  (click)="delete(token)">x</button>
 </li>
 <!-- 
 shortname: {{token.shortname}}
@@ -13,4 +15,15 @@ Circulating Supply: {{token.cirsupply}}
 Total Supply: {{token.totalsupply}}
 Volume: {{token.volume}} -->
 </ul>
+<div>
+  <label>Token name:
+    <input #tokenName />
+  </label>
+
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="btn btn-primary" (click)="add(tokenoName.value); tokenName.value=''">
+    add
+  </button>
+</div>
 <app-token-detail [token]="selectedToken"></app-token-detail>

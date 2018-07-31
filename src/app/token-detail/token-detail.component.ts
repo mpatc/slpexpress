@@ -26,5 +26,12 @@ export class TokenDetailComponent implements OnInit {
     this.tokenService.getToken(shortname).subscribe(token => this.token = token);
 
   }
+  save(): void {
+    this.tokenService.updateToken(this.token)
+      .subscribe(() => this.goBack());
 
+  }
+  goBack(): void {
+    this.location.back();
+  }
 }

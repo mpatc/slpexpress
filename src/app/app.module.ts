@@ -8,23 +8,31 @@ import { TokenDetailComponent } from './token-detail/token-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientModule } from '@angular/common/http/';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
+import { TokenSearchComponent } from './token-search/token-search.component';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TokensComponent,
-    TokenDetailComponent,
-    MessagesComponent,
-    DashboardComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
-    AlertModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+// to serve up fake data. only for front end devwork
+    HttpClientInMemoryWebApiModule.forRoot(
+      InMemoryDataService, { dataEncapsulation: false }
+    )
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    DashboardComponent,
+    TokensComponent,
+    TokenDetailComponent,
+    MessagesComponent,
+    TokenSearchComponent
+    ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
