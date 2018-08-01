@@ -30,9 +30,10 @@
     padding: 20px;
     text-align: center;
     color: #f9f904;
-    max-height: 120px;
     min-width: 120px;
-    background-color: #f90404
+    background-color: #f90404;
+    /* -webkit-box-shadow 5px 5px 15px 5px #FFED10;  */
+    box-shadow: 5px 5px 15px 5px #FFED10;
   }
   .module:hover {
     background-color: #f9f904;

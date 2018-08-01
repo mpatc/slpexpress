@@ -8,5 +8,6 @@ export class Token {
     activeusers?: number;
     volume?: number;
     price?: number;
+    dashinfo?: string;
 
 }

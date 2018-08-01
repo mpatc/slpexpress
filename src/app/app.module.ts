@@ -12,10 +12,13 @@ import { HttpClientModule } from '@angular/common/http/';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { TokenSearchComponent } from './token-search/token-search.component';
+import { ChartsModule } from 'ng2-charts';
+
 
 
 @NgModule({
   imports: [
+    ChartsModule,
     BrowserModule,
     FormsModule,
     AppRoutingModule,

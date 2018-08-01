@@ -3,6 +3,20 @@
   <a *ngFor="let token of tokens" class="col-1-4" routerLink="/detail/{{token.id}}">
     <div class="module tokens">
       <h4>{{token.name}} ({{token.shortname}})</h4>
+      <p>{{token.dashinfo}}</p>
+    </div>
+  </a>
+  <a *ngFor="let token of tokens" class="col-1-4" routerLink="/detail/{{token.id}}">
+    <div style="display: block" class="module tokens">
+      <p>{{token.name}} ({{token.shortname}})</p>
+      <canvas baseChart
+            [datasets]="barChartData"
+            [labels]="barChartLabels"
+            [options]="barChartOptions"
+            [legend]="barChartLegend"
+            [chartType]="barChartType"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
     </div>
   </a>
 </div>
