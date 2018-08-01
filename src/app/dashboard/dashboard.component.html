@@ -10,7 +10,7 @@
     <div style="display: block" class="module tokens">
       <p>{{token.name}} ({{token.shortname}})</p>
       <canvas baseChart
-            [datasets]="barChartData"
+            [datasets]= "token.barData"
             [labels]="barChartLabels"
             [options]="barChartOptions"
             [legend]="barChartLegend"
@@ -19,7 +19,7 @@
             (chartClick)="chartClicked($event)"></canvas>
     </div>
     <button class="btn btn-success" routerLink="/detail/{{token.id}}">More Info</button>
-    <button class="btn btn-danger" (click)="randomize()">Ranomize</button>
+    <button class="btn btn-danger">Ranomize</button>
   </a>
 </div>
 <app-token-search></app-token-search>

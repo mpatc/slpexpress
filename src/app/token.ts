@@ -1,5 +1,5 @@
 export class Token {
-    id?: number;
+    id: number;
     name?: string;
     shortname?: string;
     age?: number;
@@ -9,5 +9,5 @@ export class Token {
     volume?: number;
     price?: number;
     dashinfo?: string;
-
-}
+    barData = [];
+    }
