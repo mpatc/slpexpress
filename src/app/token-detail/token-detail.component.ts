@@ -11,6 +11,13 @@ import { TokenService } from '../token.service';
   styleUrls: ['./token-detail.component.css']
 })
 export class TokenDetailComponent implements OnInit {
+  public barChartOptions = {
+    scaleShowVerticalLines: false,
+    responsive: true
+  };
+  public barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartType = 'bar';
+  public barChartLegend = false;
   @Input() token: Token;
   constructor(
     private route: ActivatedRoute,
@@ -34,4 +41,8 @@ export class TokenDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
+  randomizeChart() {
+    this.tokenService.randomizeToken(this.token);
+  }
+
 }

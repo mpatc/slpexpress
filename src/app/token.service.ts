@@ -43,6 +43,30 @@ getTokenById(id: number): Observable<Token> {
     tap(_ => this.log(`fetched token id= ${id}`))
   );
 }
+randomizeToken(token: Token): Observable<any> {
+  token.barData = [
+    {data: [(Math.random() * 100),
+       (Math.random() * 100),
+       (Math.random() * 100),
+       (Math.random() * 100),
+       (Math.random() * 100),
+       (Math.random() * 100),
+       (Math.random() * 100)]
+      , label: 'Series A'},
+    {data: [(Math.random() * 100),
+       (Math.random() * 100),
+       (Math.random() * 100),
+       (Math.random() * 100),
+       (Math.random() * 100),
+       (Math.random() * 100),
+       (Math.random() * 100)]
+      , label: 'Series B'}
+  ];
+  return this.http.put(this.tokensUrl, token, httpOptions).pipe(
+    tap(_ => this.log(`updated token id=${token.id}`)),
+    catchError(this.handleError<any>('updateToken'))
+  );
+}
 
 private log(message: string) {
   this.messageService.add(`tokenService: ${message}`);

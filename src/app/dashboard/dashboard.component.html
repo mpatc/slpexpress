@@ -3,7 +3,7 @@
   <a *ngFor="let token of tokens" class="col-1-4" routerLink="/detail/{{token.id}}">
     <div class="module tokens">
       <h4>{{token.name}} ({{token.shortname}})</h4>
-      <p>{{token.dashinfo}}</p>
+      <p>The 24 hour volume is: {{token.totalsupply}}</p>
     </div>
   </a>
   <a *ngFor="let token of tokens" class="col-1-4">
@@ -19,7 +19,6 @@
             (chartClick)="chartClicked($event)"></canvas>
     </div>
     <button class="btn btn-success" routerLink="/detail/{{token.id}}">More Info</button>
-    <button class="btn btn-danger">Ranomize</button>
   </a>
 </div>
 <app-token-search></app-token-search>

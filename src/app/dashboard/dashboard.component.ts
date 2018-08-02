@@ -14,7 +14,7 @@ export class DashboardComponent implements OnInit {
   };
   public barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
   public barChartType = 'bar';
-  public barChartLegend = true;
+  public barChartLegend = false;
   public dummyBarChart = [
     {data: [(Math.random() * 100),
        (Math.random() * 100),
@@ -50,9 +50,9 @@ export class DashboardComponent implements OnInit {
   //     (Math.random() * 100),
   //     (Math.random() * 100),
   //     (Math.random() * 100)];
-  //   const clone = JSON.parse(JSON.stringify(this.barChartData));
+  //   const clone = JSON.parse(JSON.stringify(this.dummyBarChart));
   //   clone[0].data = data;
-  //   this.barChartData = clone;
+  //   this.token.barData = clone;
   //   }
   constructor(private tokenService: TokenService) { }
 

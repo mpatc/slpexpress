@@ -6,6 +6,16 @@
      <input [(ngModel)]="token.shortname" placeholder="shortname">
    </label>
   </div>
+  <div style="display: block">
+      <canvas baseChart
+      [datasets]= "token.barData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)"></canvas>
+  </div>
   <div>
      <label>age:
        <input [(ngModel)]="token.age" placeholder="age">
@@ -27,5 +37,9 @@
            </label>
          </div>
          <button class="btn btn-success" (click)="save()">save</button>
+
+
+         <button class="btn btn-danger"(click)="randomizeChart()">Ranomize</button>
+
 
  </div>
