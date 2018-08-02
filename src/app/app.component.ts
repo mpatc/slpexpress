@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Simple Ledger Protocol (SLP) Explorer';
+  title = 'SimLex 1.0';
 }

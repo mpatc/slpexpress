@@ -62,7 +62,7 @@ export class DashboardComponent implements OnInit {
 
   getTokens(): void {
     this.tokenService.getTokens()
-      .subscribe(tokens => this.tokens = tokens.slice(1, 5));
+      .subscribe(tokens => this.tokens = tokens.slice(0, 4));
     }
   }
 
