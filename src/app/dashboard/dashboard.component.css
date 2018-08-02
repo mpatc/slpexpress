@@ -32,7 +32,6 @@
     color: #f9f904;
     min-width: 120px;
     background-color: #f90404;
-    /* -webkit-box-shadow 5px 5px 15px 5px #FFED10;  */
     box-shadow: 5px 5px 15px 5px #FFED10;
   }
   .module:hover {

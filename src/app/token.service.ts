@@ -53,14 +53,7 @@ randomizeToken(token: Token): Observable<any> {
        (Math.random() * 100),
        (Math.random() * 100)]
       , label: 'Series A'},
-    {data: [(Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100)]
-      , label: 'Series B'}
+      token.barData[1]
   ];
   return this.http.put(this.tokensUrl, token, httpOptions).pipe(
     tap(_ => this.log(`updated token id=${token.id}`)),
