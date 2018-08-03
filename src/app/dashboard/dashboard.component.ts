@@ -15,24 +15,7 @@ export class DashboardComponent implements OnInit {
   public barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
   public barChartType = 'bar';
   public barChartLegend = false;
-  public dummyBarChart = [
-    {data: [(Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100)]
-      , label: 'Series A'},
-    {data: [(Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100),
-       (Math.random() * 100)]
-      , label: 'Series B'}
-  ];
+
 
   // events
   public chartClicked(e: any): void {

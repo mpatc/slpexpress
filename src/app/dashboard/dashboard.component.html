@@ -1,7 +1,7 @@
 <h3>Top Tokens</h3>
 <div class="grid grid-pad">
   <a *ngFor="let token of tokens" class="col-1-4" routerLink="/detail/{{token.id}}">
-    <div class="module tokens">
+    <div class="module tokens" tooltip="{{token.name}}">
       <h4>{{ token.name | slice : 0 : 6 }}&hellip; ({{token.shortname}})</h4>
       <p>The 24 hour volume is: {{token.totalsupply}}</p>
       <canvas baseChart

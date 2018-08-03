@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AlertModule } from 'ngx-bootstrap';
 import { AppComponent } from './app.component';
 import { TokensComponent } from './tokens/tokens.component';
 import { FormsModule } from '@angular/forms';
@@ -13,6 +12,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { TokenSearchComponent } from './token-search/token-search.component';
 import { ChartsModule } from 'ng2-charts';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 
 
@@ -26,7 +26,8 @@ import { ChartsModule } from 'ng2-charts';
 // to serve up fake data. only for front end devwork
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+    TooltipModule.forRoot(),
   ],
   declarations: [
     AppComponent,

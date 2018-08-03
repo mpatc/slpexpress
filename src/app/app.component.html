@@ -7,17 +7,19 @@
 
     <div class="content">
 
- <nav>
-  <h1>
-    {{ title }}
-    <a class="btn btn-primary" routerLink="/dashboard">Dashboard</a>
-    <a class="btn btn-primary" routerLink="/tokens">Tokens</a>
-    <a class="btn btn-primary" >About SimLex</a>
-
-  </h1>   
-  
-
-    </nav>
+ <nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+          <span>
+             {{ title }}
+               <a class="btn btn-primary" routerLink="/dashboard">Dashboard</a>
+               <a class="btn btn-primary" routerLink="/tokens">Tokens</a>
+               <a class="btn btn-primary" >About SimLex</a>
+          </span>   
+          <a class="navbar-brand" href="#">Brand</a>
+          </div>
+    </div> 
+  </nav>
 
     
     <router-outlet></router-outlet>
