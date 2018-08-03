@@ -12,7 +12,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { TokenSearchComponent } from './token-search/token-search.component';
 import { ChartsModule } from 'ng2-charts';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { TooltipModule, TabsModule } from 'ngx-bootstrap';
 
 
 
@@ -28,6 +28,7 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
       InMemoryDataService, { dataEncapsulation: false }
     ),
     TooltipModule.forRoot(),
+    TabsModule.forRoot()
   ],
   declarations: [
     AppComponent,

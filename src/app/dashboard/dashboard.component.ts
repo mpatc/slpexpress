@@ -12,8 +12,8 @@ export class DashboardComponent implements OnInit {
     scaleShowVerticalLines: false,
     responsive: true
   };
-  public barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-  public barChartType = 'bar';
+  public barChartLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
+  public barChartType = 'line';
   public barChartLegend = false;
 
 
@@ -24,19 +24,7 @@ export class DashboardComponent implements OnInit {
   public chartHovered(e: any): void {
     console.log(e);
   }
-  // public randomize(): void {
-  //   const data = [
-  //     Math.round(Math.random() * 100),
-  //     (Math.random() * 100),
-  //     (Math.random() * 100),
-  //     (Math.random() * 100),
-  //     (Math.random() * 100),
-  //     (Math.random() * 100),
-  //     (Math.random() * 100)];
-  //   const clone = JSON.parse(JSON.stringify(this.dummyBarChart));
-  //   clone[0].data = data;
-  //   this.token.barData = clone;
-  //   }
+
   constructor(private tokenService: TokenService) { }
 
   ngOnInit() {
