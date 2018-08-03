@@ -7,26 +7,26 @@
 
     <div class="content">
 
- <!-- <nav class="navbar navbar-default">
+ <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
           <span>
              {{ title }}
-               <a class="btn btn-primary" routerLink="/dashboard">Dashboard</a>
-               <a class="btn btn-primary" routerLink="/tokens">Tokens</a>
+
+               <a class="btn btn-info navbar-btn" routerLink="/dashboard">Dashboard</a>
+               <a class="btn btn-info navbar-btn" routerLink="/tokens">Tokens</a>
                <a class="btn btn-primary" >About SimLex</a>
           </span>   
-          <a class="navbar-brand" href="#">Brand</a>
           </div>
     </div> 
-  </nav> -->
-  <div>
+  </nav>
+  <!-- <div>
       <tabset>
-        <tab routerLink="/dashboard" heading="Dashboard" id="tab1">Dashboardt</tab>
-        <tab routerLink="/tokens" heading="Tokens">Tokens</tab>
-        <tab heading="Basic Title 2">About</tab>
+        <tab heading="Dashboard" id="tab1"><a class="btn btn-primary" routerLink="/dashboard">Dashboard</a></tab>
+        <tab heading="Tokens"><a class="btn btn-primary" routerLink="/tokens">Tokens</a></tab>
+        <tab heading="About">About</tab>
       </tabset>
-    </div>
+    </div> -->
 
     
     <router-outlet></router-outlet>

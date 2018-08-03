@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TabDirective } from 'ngx-bootstrap/tabs';
+
 
 @Component({
   selector: 'app-root',
