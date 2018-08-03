@@ -7,7 +7,8 @@
    </label>
   </div>
   <div style="display: inline-block">
-      <canvas baseChart
+      <canvas *ngIf="token.barData[0].data[0] > token.barData[0].data[6]" 
+        baseChart
       [datasets]= "token.barData"
       [labels]="barChartLabels"
       [options]="chartOptions"
@@ -16,7 +17,19 @@
       (chartHover)="chartHovered($event)"
       (chartClick)="chartClicked($event)"></canvas>
   </div>
+  <div style="display: inline-block">
+      <canvas *ngIf="token.barData[0].data[0] < token.barData[0].data[6]" baseChart
+      [datasets]= "token.barData"
+      [labels]="barChartLabels"
+      [options]="chartOptions"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+      [colors]="greenLineChartColors"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)"></canvas>
+  </div>
   <div>
+    <div>The 7 day change is {{token.barData[0].data[6] - token.barData[0].data[0] | number}} &#37;</div>
      <label>age:
        <input [(ngModel)]="token.age" placeholder="age">
      </label>

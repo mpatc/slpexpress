@@ -16,8 +16,18 @@ export class TokenDetailComponent implements OnInit {
     responsive: true
   };
   public barChartLabels = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
-  public barChartType = 'bar';
+  public barChartType = 'line';
   public barChartLegend = false;
+  public greenLineChartColors: Array<any> = [
+    {
+      backgroundColor: '#ccffcc',
+      borderColor: '#009900',
+      pointBackgroundColor: '#e6ffe6',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: '#003300'
+    }
+  ];
   @Input() token: Token;
   constructor(
     private route: ActivatedRoute,
