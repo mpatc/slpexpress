@@ -3,13 +3,25 @@
   <a *ngFor="let token of tokens" class="col-1-4" routerLink="/detail/{{token.id}}">
     <div class="module tokens" tooltip="{{token.name}}">
       <h4>{{ token.name | slice : 0 : 6 }}&hellip; ({{token.shortname}})</h4>
-      <p>The 24 hour volume is: {{token.totalsupply}}</p>
-      <canvas baseChart
+      <p *ngIf="token.barData[0].data[0] > token.barData[0].data[6]">The 1 week Loss is: {{token.barData[0].data[6] - token.barData[0].data[0] | number}}</p>
+      <p *ngIf="token.barData[0].data[0] < token.barData[0].data[6]">The 1 week GAINZ is: {{token.barData[0].data[6] - token.barData[0].data[0]| number}}</p>
+      <canvas *ngIf="token.barData[0].data[0] > token.barData[0].data[6]"
+      baseChart
       [datasets]= "token.barData"
       [labels]="barChartLabels"
-      [options]="barChartOptions"
+      [options]="chartOptions"
       [legend]="barChartLegend"
       [chartType]="barChartType"
+      (chartHover)="chartHovered($event)"
+      ></canvas>
+      <canvas *ngIf="token.barData[0].data[0] < token.barData[0].data[6]"
+      baseChart
+      [datasets]= "token.barData"
+      [labels]="barChartLabels"
+      [options]="chartOptions"
+      [legend]="barChartLegend"
+      [chartType]="barChartType"
+      [colors]="greenLineChartColors"
       (chartHover)="chartHovered($event)"
       ></canvas>
     </div>

@@ -13,7 +13,8 @@ export class InMemoryDataService implements InMemoryDbService {
      (Math.random() * 100),
      (Math.random() * 100),
      (Math.random() * 100)]
-    , label: 'Series A'}]
+    , label: 'Series A'}
+  ]
     },
       { id: 2, name: 'SundaeCoin', shortname: 'SDC',
        age: 44, totalsupply: 34534534534, cirsupply: 3453453453,

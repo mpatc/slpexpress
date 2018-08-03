@@ -29,15 +29,16 @@
   .module {
     padding: 20px;
     text-align: center;
-    color: #f9f904;
+    color: black;
     min-width: 120px;
-    background-color: #f90404;
-    box-shadow: 5px 5px 15px 5px #FFED10;
+    background-color: #ffffff;
+    
   }
   .module:hover {
-    background-color: #f9f904;
+    background-color: oldlace;
     cursor: pointer;
-    color: #f90404;
+    color: black;
+    box-shadow: 5px 5px 15px 5px cornsilk
   }
   .grid-pad {
     padding: 10px 0;

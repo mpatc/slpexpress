@@ -8,13 +8,23 @@ import { TokenService } from '../token.service';
 })
 export class DashboardComponent implements OnInit {
   tokens: Token[] = [];
-  public barChartOptions = {
+  public chartOptions = {
     scaleShowVerticalLines: false,
     responsive: true
   };
   public barChartLabels = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
   public barChartType = 'line';
   public barChartLegend = false;
+  public greenLineChartColors: Array<any> = [
+    {
+      backgroundColor: '#ccffcc',
+      borderColor: '#009900',
+      pointBackgroundColor: '#e6ffe6',
+      pointBorderColor: '#fff',
+      pointHoverBackgroundColor: '#fff',
+      pointHoverBorderColor: '#003300'
+    }
+  ];
 
 
   // events

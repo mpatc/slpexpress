@@ -11,7 +11,7 @@ import { TokenService } from '../token.service';
   styleUrls: ['./token-detail.component.css']
 })
 export class TokenDetailComponent implements OnInit {
-  public barChartOptions = {
+  public chartOptions = {
     scaleShowVerticalLines: false,
     responsive: true
   };
