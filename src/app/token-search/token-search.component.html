@@ -1,7 +1,40 @@
 <div id="search-component">
-  <h4>Token Search</h4>
- 
-  <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+  <button class="btn btn-success" routerlink="/dashboard">Dashboard</button>
+    <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                aria-controls="dropdown-basic">
+          Select Token <span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item bch" href="#">BCH</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">BST</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">WND</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">HEW</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">BJC</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">AWS</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">IUE</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">NHH</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Everything</a>
+          </li>
+        </ul>
+      </div>
+    <div class="btn-group" dropdown>
+        <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+                aria-controls="dropdown-basic">
+          Scope <span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" href="#">Transactions</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Addresses</a></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Documentation</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" href="#">Everything</a>
+          </li>
+        </ul>
+      </div><input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
  
   <ul class="search-result">
     <li *ngFor="let token of tokens$ | async" >
@@ -11,3 +44,4 @@
     </li>
   </ul>
 </div>
+<router-outlet></router-outlet>

@@ -32,7 +32,8 @@
     color: black;
     min-width: 120px;
     background-color: #ffffff;
-    
+    border: 1px solid cornsilk;
+   
   }
   .module:hover {
     background-color: oldlace;
